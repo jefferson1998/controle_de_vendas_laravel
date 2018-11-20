@@ -3,9 +3,12 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Controle de Vendas</h1>
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+
+	<div>
+		<button class="btn-primary">Produto</button>
+	</div>
 @stop

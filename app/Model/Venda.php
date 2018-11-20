@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Venda extends Model
 {
-   protected $fillable = [
-    	'nome', 'data', 'valorTotal',
+	public $timestamps = false;
+	
+   	protected $fillable = [
+    	'data', 'valorTotal',
     ];
 }
