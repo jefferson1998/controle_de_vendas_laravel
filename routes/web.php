@@ -11,6 +11,7 @@
 |
 */
 $this->group(['middleware' => ['auth']], function(){
+	$this->get('admin/produto',  "Admin\ProdutoController@index")->name('admin.produto') ;
 	$this->get('admin',  "Admin\AdminController@index")->name('admin.home') ;
 });
 $this->get('/',  "Site\SiteController@index")->name('home');

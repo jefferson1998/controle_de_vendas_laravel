@@ -110,9 +110,16 @@ return [
     'menu' => [
         'MENU',
         [
-            'text'        => 'Menu',
+            'text'        => 'Dashboard',
             'url'         => 'admin',
-            'icon'        => 'home',
+            'icon'        => 'dashboard',
+        ],
+
+        [
+            'text'  => 'Produtos',
+            'icon' => 'store',
+            'url' =>  'admin/produto',
+
         ],
     ],
 
