@@ -10,8 +10,17 @@ class ProdutoController extends Controller
 {
     public function index()
     {
-        dd(model()->produto());
-        return view('admin.produto.index'); 
+        return view('admin.produto.index');
     }
 
+    public function create()
+    {
+        return view('admin.produto.create');
+    }
+
+    public function produtoEstoque(Request $request)
+    {
+    	$produto->nome($request->nome);
+    	$produto->valor($request->valor);
+    }
 }

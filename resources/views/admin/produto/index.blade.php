@@ -9,7 +9,7 @@
 @section('content')
 		<div class="box">
 				<div class="box-header">
-					<a href="" class="btn btn-primary"> Adicionar</a>
+					<a href="{{ route ('admin.produto.create')}}" class="btn btn-primary"> Adicionar</a>
 					<a href="" class="btn btn-primary"> Excluir</a>
 					<br> </br>
 					<div class="small-box bg-green">

@@ -108,7 +108,7 @@ return [
     */
 
     'menu' => [
-        'MENU',
+        'MENU'=>
         [
             'text'        => 'Dashboard',
             'url'         => 'admin',
@@ -119,7 +119,13 @@ return [
             'text'  => 'Produtos',
             'icon' => 'store',
             'url' =>  'admin/produto',
-
+            'submenu' => [
+                [
+                    'text' => 'Lista de Produtos',
+                    'url' => 'admin/produto',
+                    'icon' => '',
+                ],
+            ],
         ],
     ],
 

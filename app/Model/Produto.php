@@ -11,4 +11,14 @@ class Produto extends Model
     protected $fillable = [
     	'nome', 'valor',
     ];
+
+    public function nome ($nome)
+    {
+    	dd($nome);
+    }
+
+    public function valor ($valor)
+    {
+    	dd($valor);
+    }
 }
