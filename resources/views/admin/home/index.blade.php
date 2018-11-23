@@ -8,7 +8,4 @@
 
 @section('content')
 
-	<div>
-		<button class="btn-primary">Produto</button>
-	</div>
 @stop

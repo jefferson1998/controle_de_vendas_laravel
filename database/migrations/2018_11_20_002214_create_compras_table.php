@@ -15,8 +15,10 @@ class CreateComprasTable extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->date('data');
             $table->double('valorTotal',5,2);
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');    
         });
     }
 
@@ -27,6 +29,6 @@ class CreateComprasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entradas');
+        Schema::dropIfExists('compras');
     }
 }

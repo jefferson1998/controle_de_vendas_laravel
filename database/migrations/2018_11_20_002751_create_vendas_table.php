@@ -16,7 +16,10 @@ class CreateVendasTable extends Migration
         Schema::create('vendas', function (Blueprint $table) {
             $table->increments('id');
             $table->date('data');
+            $table->integer('user_id')->unsigned();
             $table->double('valorTotal',5,2);
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

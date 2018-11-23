@@ -20,7 +20,7 @@ class ProdutoController extends Controller
 
     public function produtoEstoque(Request $request)
     {
-    	$produto->nome($request->nome);
-    	$produto->valor($request->valor);
+    	dd(auth()->users()->produto()->firstOnCreate([]));
+
     }
 }

@@ -14,8 +14,8 @@
         		<form method="POST" action="{{route ('admin.produto.estoque')}}">
         			{!! csrf_field() !!}
         			<div class="form-group">
-        				<input type="text" name="nomeProduto"placeholder="Nome produto" class="form-control">
-        				<input type="text" name="valorProduto"placeholder="Valor" class="form-control">
+        				<input type="text" name="nome" placeholder="Nome produto" class="form-control">
+        				<input type="text" name="valor" placeholder="Valor" class="form-control">
         			</div>
 
         			<div class="form-group">
