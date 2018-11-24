@@ -127,6 +127,31 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'  => 'Compras',
+            'icon' => 'store',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Compras',
+                    'url' => 'admin/compra',
+                    'icon' => 'money',
+                ],
+            ],
+        ],
+
+        [
+            'text'  => 'Vendas',
+            'icon' => 'store',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Vendas',
+                    'url' => 'admin/venda',
+                    'icon' => 'money',
+                ],
+            ],
+        ],
+
     ],
 
     /*

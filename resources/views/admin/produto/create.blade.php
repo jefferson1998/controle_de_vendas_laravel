@@ -11,7 +11,8 @@
 		<div class="box-header">
 			<h3> Cadastro Produto </h3>
 			<div class="box-boy">
-        		<form method="POST" action="{{route ('admin.produto.estoque')}}">
+                @include('admin.includes.alert')
+        		<form method="POST" action="{{route ('admin.produto.criarProduto')}}">
         			{!! csrf_field() !!}
         			<div class="form-group">
         				<input type="text" name="nome" placeholder="Nome produto" class="form-control">

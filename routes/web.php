@@ -10,14 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-$this->group(['middleware' => ['auth']], function(){
-	$this->post('admin/produto/estoque',  "Admin\ProdutoController@produtoEstoque")->name('admin.produto.estoque') ;
-	$this->get('admin/produto/create',  "Admin\ProdutoController@create")->name('admin.produto.create') ;
-	$this->get('admin/produto',  "Admin\ProdutoController@index")->name('admin.produto') ;
-	$this->get('admin',  "Admin\AdminController@index")->name('admin.home') ;
-});
-$this->get('/',  "Site\SiteController@index")->name('home');
 Auth::routes();
+$this->group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
+	$this->get('/',  "AdminController@index")->name('admin.home') ;
+
+	$this->post('produto/criarProduto',  "ProdutoController@criarProduto")->name('admin.produto.criarProduto') ;
+	$this->get('produto/create',  "ProdutoController@create")->name('admin.produto.create') ;
+	$this->get('produto',  "ProdutoController@index")->name('admin.produto') ;
+	
+	$this->get('venda',  "VendaController@index")->name('admin.venda.index') ;
+	
+	$this->get('compra',  "CompraController@index")->name('admin.compra.index') ;
+});
+//$this->get('/', 'Site\SiteController@index')->name('home');
+
+Route::get('/', function(){
+	return view ('auth.login');
+});
+
 
 
 

@@ -16,8 +16,8 @@ class CreateProdutosTable extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('nome')->default("");
-            $table->double('valor',5,2) ->default(0); 
+            $table->string('nome');
+            $table->double('valor',5,2); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');    
         });
     }

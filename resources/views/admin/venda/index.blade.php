@@ -3,20 +3,20 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1>Produtos</h1>
+    <h1>Vendas</h1>
 @stop
 
 @section('content')
 		<div class="box">
 				<div class="box-header">
-					<a href="{{ route ('admin.produto.create')}}" class="btn btn-primary"> Adicionar</a>
+					<a href="{{ route ('admin.produto.create')}}" class="btn btn-primary"> Realizar venda</a>
 					<a href="" class="btn btn-primary"> Excluir</a>
 					<br> </br>
 					<div class="small-box bg-green">
 		            		<div class="inner">
 		             				 <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-		             		 <p>Total de Produtos</p>
+		             		 <p>Valor total da venda</p>
 		           			</div>
 			          		<div class="icon">
 			              		<i class="ion ion-stats-bars"></i>
