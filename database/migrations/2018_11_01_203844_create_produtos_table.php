@@ -18,6 +18,7 @@ class CreateProdutosTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('nome');
             $table->double('valor',5,2); 
+            $table->double('quantidade',5); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');    
         });
     }

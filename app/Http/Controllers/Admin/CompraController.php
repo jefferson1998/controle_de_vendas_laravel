@@ -12,8 +12,13 @@ class CompraController extends Controller
    	return view('admin.compra.index');
    }
 
-    public function create ()
+   public function create ()
    {
    	return view('admin.compra.index');
+   }
+
+   public function buying ()
+   {
+   	return view('admin.compra.buying');
    }
 }
